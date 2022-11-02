@@ -1,0 +1,218 @@
+.sect6 {
+    width: 100%;
+    height: 40vw;
+    position: relative;
+    overflow: hidden;
+    position: relative;
+    /* margin-bottom: 2rem; */
+}
+
+.sect6 > h2 {
+    text-align: center;
+    font-size: 2.5rem;
+    font-weight: 900;
+    letter-spacing: -5px;
+}
+
+.sect6 > p {
+    text-align: center;
+    line-height: 300%;
+    color: #676767;
+    font-size: 1.3rem;
+    font-weight: 600;
+}
+.sect6 ul {
+    width: 85%;
+    height: 25vw;
+    margin: 2rem auto;
+    align-items: flex-start;
+    display: flex;
+    flex-direction: row;
+    /* justify-content: center; */
+    /* border: 1px solid #000; */
+}
+
+.sect6 > div > ul > li {
+    width: 33%;
+    height: 100%;
+    margin: 0 .5rem;
+    /* border: 1px solid #000; */
+}
+
+.sect6 > div > ul > li > a {
+    width: 100%;
+    height: 100%;
+    background: url(../images/youtube_vidio.jpg) no-repeat top /100% 50%;
+    transition: .2s;
+    display: block;
+    padding-top: 65%;
+    /* border: 1px solid #000; */
+}
+
+.sect6 > div > ul > li:hover > a {
+    background: url(../images/youtube_vidio.jpg) no-repeat top / 105% 52%;
+}
+
+.sect6 > div > ul > li > a > dl {
+    width: 100%;
+    height: 50%;
+    /* border: 1px solid #000; */
+}
+
+.sect6 > div > ul > li > a > dl > dt {
+    letter-spacing: -1px;
+    font-size: 1rem;
+    font-weight: 900;
+    transition: .2s;
+
+    width: 100%;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+.sect6 > div > ul > li:hover > a > dl > dt {
+    color: rgb(var(--aside-basic-color));
+}
+
+.sect6 > div > ul > li > a > dl > dd {
+    font-size: 14px;
+    /* font-weight: ; */
+    font-weight: 500;
+    color: #4b4b4b;
+    line-height: calc(30/18);
+    margin-top: 19px;
+    -webkit-line-clamp: 3;
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+    letter-spacing: -0.1em;
+}
+.sect6 > div > ul > li > a > p {
+    margin-top: 1rem;
+    width: 100%;
+    /* height: 100%; */
+    /* border: 1px solid #000; */
+    font-size: 16px;
+    letter-spacing: -0.1em;
+    font-weight: 300;
+    color: #4b4b4b;
+    margin-top: 27px;
+}
+
+
+.sect6 > .box {
+    width: 90%;
+    margin: 0rem auto;
+    /* border: 1px solid #000; */
+    position: relative;
+}
+
+
+
+.sect6 > .box > .btnWrap > button {
+    width: 90px;
+    height: 90px;
+    position: absolute;
+    border: 1px solid rgb(0, 0, 0);
+    background: no-repeat center center;
+    border-radius: 10px;
+    top: calc(50%);
+    transform: translateY(-50%);
+}
+.sect6 > .box > .btnWrap > .btnNext {
+    left: 0;
+    background-image: url(../images/arrow_1_b.png);
+    transition: .2s;
+}
+.sect6 > .box > .btnWrap > .btnNext:hover {
+    background: rgb(var(--footer-basic-color)) url(../images/arrow_1.png) no-repeat center center;
+    border: 1px solid rgb(var(--footer-basic-color));
+}
+.sect6 > .box > .btnWrap > .btnPrev {
+    right: 0;
+    background-image: url(../images/arrow_1_b_r.png);
+    transition: .2s;
+}
+.sect6 > .box > .btnWrap > .btnPrev:hover {
+    background: rgb(var(--footer-basic-color)) url(../images/arrow_1_r.png) no-repeat center center;
+    border: 1px solid rgb(var(--footer-basic-color));
+}
+
+.sect6 > h2 {
+    text-align: center;
+    font-size: 2.5rem;
+    font-weight: 900;
+    letter-spacing: -5px;
+}
+
+.sect6 > p {
+    text-align: center;
+    line-height: 300%;
+    color: #676767;
+    font-size: 1.3rem;
+    font-weight: 600;
+}
+
+@media all and (max-width:1000px) {
+    .sect6  {
+        height:80vw;
+        /* border: 5px solid #f00; */
+    }
+    .sect6 > h2 {
+        font-size: 2rem;
+        font-weight: 900;
+    }
+    .sect6 > p {
+        font-size: 1rem;
+        font-weight: 600;
+    }
+    .sect6 ul {
+        width: 100%;
+        height: 100%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        /* border: 2px solid #f00; */
+    }
+  
+    .sect6 > div > ul > li{
+        width: 60%;
+        height: 60vw;
+
+    }
+    .sect6 > ul > li > a > dl > dd {
+        position:absolute;
+        top:-20vw;
+        font-size: px;
+        color: #555555;
+        display: flex;
+        flex-direction: column;
+    }
+    .sect6 > .box > .btnWrap > button {
+        width: 50px;
+        height: 50px;
+    }
+    .sect6 > .box > .btnWrap > .btnNext {
+        background-size: 40px;
+    }
+    .sect6 > .box > .btnWrap > .btnNext:hover {
+        background-size: 40px;
+    }
+    .sect6 > .box > .btnWrap > .btnPrev {
+        background-size: 40px;
+    }
+    .sect6 > .box > .btnWrap > .btnPrev:hover {
+        background-size: 40px;
+    }
+}
+
+
+
+
+@media all and (max-width:700px) {
+    .sect6  {
+        height:60vh;
+        /* background-size: 1px; */
+    }
+}

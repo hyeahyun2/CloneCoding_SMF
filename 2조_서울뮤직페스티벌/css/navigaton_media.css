@@ -1,0 +1,205 @@
+@charset "utf-8";
+:root {
+  --gnbView-backColor: #fff;
+}
+
+/* 크기 1280px 이상 */
+@media all and (min-width: 1280px) {
+  #headerWrap {
+    height: 120px;
+  }
+  #headerWrap.on {
+    height: 400px;
+    background-color: rgb(var(--nav-hover-purple-color));
+  }
+  #header {
+    height: 120px;
+  }
+
+  /* logo */
+  #header > ul {
+    width: 20%;
+    margin-top: 20px;
+  }
+  /* 서브네비 보이게 */
+  #headerWrap:hover #header {
+    height: 400px;
+    background: url(../images/header_img.png) no-repeat left 5% bottom 30%;
+  }
+  #headerWrap:hover::before {
+    content: "";
+    position: absolute; top: 120px; left: 0;
+    width: 100%; height: 2px;
+    background: linear-gradient(90deg, rgba(227,67,149,1) 0%, rgba(0,174,183,1) 100%);
+  }
+  #gnbList > li > span {
+    display: none;
+  }
+  /* 자바스크립트로 구현 */
+  /* #headerWrap:hover {
+    height: 400px;
+    background-color: rgb(var(--nav-hover-purple-color));
+  }
+  #headerWrap:hover::after {
+    content: "";
+    position: absolute; top: 120px; left: 0;
+    width: 100%; 
+  } */
+}
+
+/* 크기 770px ~ 1279px */
+/* and (min-width: 770px) */
+@media all and (max-width: 1279px) {
+  /* header */
+  #headerWrap {
+    overflow: visible;
+    height: 80px;
+  }
+  #header {
+    height: 80px;
+  }
+  #headerWrap:hover::before {
+    display: none;
+  }
+  #headerWrap:hover #header {
+    background-image: unset;
+    height: 80px;
+  }
+  /* logo */
+  #header > ul {
+    width: 150px;
+    margin-top: 0;
+  }
+  #header > ul > li:nth-of-type(1) > a {
+    width: 53px;
+    background-size: 53px;
+  }
+  #header > ul > li:nth-of-type(2) > a {
+    width: 61px;
+    background-size: 61px;
+  }
+
+  /* gnb */
+  .gnbView { 
+    display: block;
+    position: absolute; top: 30px; right: 5%;
+    width: 30px; height: 20px;
+    border-top: 2px solid #fff;
+    border-bottom: 2px solid #fff;
+    z-index: 40;
+    transition: 0.2s;
+  }
+  .gnbView::after {
+    content: ""; 
+    position: absolute; 
+    top: 7px;
+    width: 100%; height: 2px;
+    background: var(--gnbView-backColor);
+    transition: 0.2s;
+  }
+  #gnb {
+    background-color: #ffffff;
+    z-index: 30;
+    width: 350px;
+    height: 100%;
+    margin-top: 0;
+    position: fixed;
+    top: 0;
+    right: -350px;
+    transition: 0.5s right;
+  }
+  #gnb > ul {
+    /* border: 1px solid #000; */
+    width: 100%;
+    flex-direction: column;
+    margin-top: 80px;
+  }
+  #gnbList > li {
+    width: 100%;
+    color: #000;
+    border-top: 2px solid #d5d5d5;
+    font-size: 24px;
+    padding: 4%;
+    flex-wrap: wrap;
+  }
+  #gnbList > li > span {
+    text-indent: -9999px;
+    background: url(../images/plus.png) no-repeat center / cover;
+    width: 15px; height: 15px;
+    position: absolute; 
+    right: 5%; top: 23px;
+    cursor: pointer; /* 롤오버시 마우스 포인터모양 */
+  }
+  #gnbList > li > a {
+    text-align: left;
+    display: contents;
+  }
+  #gnb > ul > li:first-of-type {
+    font-size: 20px;
+  }
+  #gnbList > li:hover > a {
+    background: none;
+    -webkit-text-fill-color: #000;
+  }
+  /* #gnbList > li:hover .snb {
+    height: auto;
+  } */
+  
+  /* 서브메뉴 snb */
+  #gnbList > li > ul {
+    color: #5b5b5b;
+    font-size: 18px;
+    margin: 0;
+    position: relative;
+    top: 10px;
+    margin-bottom: 10px;
+    /* 클릭시 나타나게 */
+    /* height: 0; */
+    display: none;
+  }
+  #gnbList > li > ul.mobaOn {
+    height: 200px;
+  }
+  
+  .snb li {
+    text-align: left;
+    width: 100%;
+    border-top: 1px solid #d5d5d5;
+    padding: 2%;
+    /* border: 2px solid #000; */
+    /* display: none; */
+    /* overflow: hidden; */
+  }
+  .snb li:hover { color : #5b5b5b; }
+  .snb li a {
+    display: block;
+    width: 100%;
+  }
+  /* 언어선택 */
+  #LangSelect {
+    width: 51px;
+    top: 25px; right: 10%;
+  }
+  #LangSelect p {
+    background-size: 10px;
+    transition: 0.5s;
+  }
+
+}
+
+/* 크기 770px 이하 */
+@media all and (max-width: 769px) {
+
+  #gnb {
+    z-index: 30;
+    width: 45vw;
+  }
+  #gnbList > li {
+    font-size: 18px;
+  }
+
+  #LangSelect {
+    width: 51px;
+    top: 25px; right: 15%;
+  }
+}
